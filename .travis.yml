@@ -1,0 +1,6 @@
+language: ruby
+rvm:
+  - 2.0.0
+env:
+  secure: "mxB+rWqkFeL/0PcVKbixYZCsU/Og238NQ7LFixJqTR9vdbH9+5nRtZm9Od4s\n9r8b6ijaxZ+bbpQvZH4qipVNKMLlcbzXSkghj5/6sG51EIaOBy/ftI70xOii\nL/Z/MoVfeCV8M7o09+DXfEmHKnPVp4X72415kyiQl0OQtsfxOHA="
+after_success: ./deploy
