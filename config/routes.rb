@@ -1,5 +1,5 @@
 Meloria::Application.routes.draw do
   root to: "welcome#index"
 
-  resources :shops, only: [:new, :create]
+  resources :shops, only: [:new, :create, :show]
 end
