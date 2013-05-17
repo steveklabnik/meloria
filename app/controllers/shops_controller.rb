@@ -4,8 +4,12 @@ class ShopsController < ApplicationController
   end
 
   def create
-    @shop = Shop.create(shop_params)
-    redirect_to shop_path(@shop)
+    @shop = Shop.new(shop_params)
+    if @shop.save
+      redirect_to shop_path(@shop)
+    else
+      render :new
+    end
   end
 
   private

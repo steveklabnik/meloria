@@ -14,4 +14,12 @@ class ShopsControllerTest < ActionController::TestCase
 
     assert_redirected_to shop_path(assigns(:shop))
   end
+
+  test "Shows error with invalid shop" do
+    assert_no_difference('Shop.count') do
+      post :create, shop: {foo: "bar"}
+    end
+
+    assert_template :new
+  end
 end
