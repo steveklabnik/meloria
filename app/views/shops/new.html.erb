@@ -1,6 +1,7 @@
 <h1>Make a new shop</h1>
 
 <%= form_for @shop do |form| %>
-  <%= form.text_field :name %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br />
   <%= form.submit %>
 <% end %>

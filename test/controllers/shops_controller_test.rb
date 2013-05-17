@@ -22,4 +22,13 @@ class ShopsControllerTest < ActionController::TestCase
 
     assert_template :new
   end
+
+  test "can show a shop" do
+    shop = shops(:artisan)
+
+    get :show, id: shop.id
+    assert_response :success
+
+    assert_not_nil assigns(:shop)
+  end
 end
