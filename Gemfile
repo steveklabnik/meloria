@@ -10,6 +10,10 @@ group :production do
   gem 'pg'
 end
 
+group :development, :production do
+  gem 'minitest-rails'
+end
+
 gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
