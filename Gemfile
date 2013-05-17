@@ -11,7 +11,7 @@ group :production do
   gem 'pg'
 end
 
-group :development, :production do
+group :development, :test do
   gem 'minitest-rails'
 end
 
