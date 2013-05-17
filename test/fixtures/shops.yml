@@ -1,0 +1,6 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+artisan:
+  name: Artisan Tattoo Gallery
+
