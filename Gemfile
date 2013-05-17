@@ -26,3 +26,5 @@ gem 'jquery-rails'
 group :doc do
   gem 'sdoc', require: false
 end
+
+gem 'coveralls', require: false
