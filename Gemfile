@@ -28,3 +28,5 @@ group :doc do
 end
 
 gem 'coveralls', require: false
+
+gem "bcrypt-ruby"
