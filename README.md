@@ -21,3 +21,9 @@ To run the tests, simply
 $ rake
 ```
 
+
+License
+-------
+
+Meloria is licenced under the GNU Affero GPL License v3. See COPYING for more
+details.
