@@ -1,1 +1,49 @@
-<%= @shop.name %>
+<h1><%= @shop.name %></h1>
+
+<h1>Listing customers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Date on waiting list</th>
+      <th>Status</th>
+      <th>Local</th>
+      <th>Location</th>
+      <th>Credit</th>
+      <th>Want</th>
+      <th>Notes</th>
+      <th>Shop</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.name %></td>
+        <td><%= customer.phone %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.date_on_waiting_list %></td>
+        <td><%= customer.status %></td>
+        <td><%= customer.local %></td>
+        <td><%= customer.location %></td>
+        <td><%= customer.credit %></td>
+        <td><%= customer.want %></td>
+        <td><%= customer.notes %></td>
+        <td><%= customer.shop %></td>
+        <td><%= link_to 'Show', customer %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer', new_customer_path %>

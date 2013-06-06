@@ -1,6 +1,7 @@
 class ShopsController < ApplicationController
   def show
     @shop = Shop.find(params[:id])
+    @customers = @shop.customers
   end
 
   def new
@@ -9,6 +10,8 @@ class ShopsController < ApplicationController
 
   def create
     @shop = Shop.new(shop_params)
+    @shop.user = current_user
+
     if @shop.save
       redirect_to shop_path(@shop)
     else
