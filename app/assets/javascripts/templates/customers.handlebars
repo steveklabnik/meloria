@@ -1,0 +1,11 @@
+<h1>Customers</h1>
+
+<ul>
+  {{#each}}
+    <li>{{#linkTo "customer" this}}{{name}}{{/linkTo}}</li>
+  {{else}}
+    <li>There are no customers.</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
