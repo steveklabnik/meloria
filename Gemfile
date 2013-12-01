@@ -9,3 +9,5 @@ gem "uglifier", ">= 1.3.0"
 
 gem "pg", group: :production
 gem "sqlite3", group: :development
+
+gem "minitest-rails"
