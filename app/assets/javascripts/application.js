@@ -16,6 +16,7 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require bootstrap-3.0.2.min
 //= require_self
 //= require meloria
 
