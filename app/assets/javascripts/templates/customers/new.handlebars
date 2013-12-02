@@ -5,28 +5,30 @@
       <div class="modal-body">
 <form {{action save on="submit"}} class="form-horizontal">
 <table>
-<tr><th>Name</th><td>{{input}}</td></tr>
-<tr><th>Phone</th><td>{{input}}</td></tr>
-<tr><th>Email</th><td>{{input}}</td></tr>
-<tr><th>Date on waiting list</th><td>{{input type="date"}}</td></tr>
+<tr><th>Name</th><td>{{input valueBinding="name"}}</td></tr>
+<tr><th>Phone</th><td>{{input valueBinding="phone"}}</td></tr>
+<tr><th>Email</th><td>{{input valueBinding="email"}}</td></tr>
+<tr><th>Date on waiting list</th><td>{{input type="date" valueBinding="date_on_waiting_list"}}</td></tr>
 <tr><th>Status</th><td>
-  <select>
-    <option selected="selected" value="1">Ongoing</option>
-    <option value="2">Waiting list</option>
-    <option value="3">Finished</option>
-    <option value="4">On Hold</option>
-  </select>
+{{view Ember.Select
+       content=statuses
+       optionValuePath="content.value"
+       optionLabelPath="content.name"
+       value=status
+}}
 </td></tr>
 <tr><th>Local</th><td>
-  <select>
-    <option selected="selected" value="1">Local</option>
-    <option value="0">Out of town</option>
-  </select>
+{{view Ember.Select
+       content=locals
+       optionValuePath="content.value"
+       optionLabelPath="content.name"
+       value=local
+}}
 </td></tr>
-<tr><th>Location</th><td>{{input}}</td></tr>
-<tr><th>Credit</th><td>{{input}}</td></tr>
-<tr><th>Want</th><td>{{textarea}}</td></tr>
-<tr><th>Notes</th><td>{{textarea}}</td></tr>
+<tr><th>Location</th><td>{{input valueBinding="location"}}</td></tr>
+<tr><th>Credit</th><td>{{input valueBinding="credit"}}</td></tr>
+<tr><th>Want</th><td>{{textarea valueBinding="want"}}</td></tr>
+<tr><th>Notes</th><td>{{textarea valueBinding="notes"}}</td></tr>
 </table>
       </div>
       <div class="modal-footer">
