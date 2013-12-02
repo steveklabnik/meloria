@@ -23,4 +23,8 @@
 // for more details see: http://emberjs.com/guides/application/
 Meloria = Ember.Application.create();
 
+Ember.LinkView.reopen({
+  attributeBindings: ['data-toggle', 'data-target']
+});
+
 //= require_tree .
